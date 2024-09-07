@@ -154,7 +154,7 @@ const Model = () => {
               htmlFor="dropzone-file"
               className="flex flex-col mt-1 items-center justify-center pb-5 w-full border border-gray-300 border-dashed rounded-2xl cursor-pointer bg-gray-50"
             >
-              <div class="flex flex-col items-center justify-center">
+              <div className="flex flex-col items-center justify-center">
                 <Lottie
                   animationData={animationData4}
                   className="h-20 w-20 mb-2"

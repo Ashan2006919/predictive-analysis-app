@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   base: '/predictive-analysis-app/',
+    build: {
+    chunkSizeWarningLimit: 1000
+  },
   plugins: [react()],
   resolve: {
     alias: {
