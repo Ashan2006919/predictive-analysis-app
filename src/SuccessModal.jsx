@@ -34,7 +34,7 @@ const SuccessModal = ({ isOpen, toggleModal }) => {
                 className="font-bold text-gray-800 flex items-center"
               >
                 <Lottie animationData={animationData2} className="w-14 h-14" />
-                Analysis Complete
+                Done!
               </h3>
             </div>
             <button
@@ -62,7 +62,7 @@ const SuccessModal = ({ isOpen, toggleModal }) => {
           </div>
           <div className="p-4 overflow-y-auto text-center">
             <p className="text-gray-800">
-              Results have been successfully analyzed.
+              Thanks you for joining us
             </p>
           </div>
           <div className="flex justify-end p-4">
@@ -70,7 +70,7 @@ const SuccessModal = ({ isOpen, toggleModal }) => {
               className="py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
               onClick={handleViewResults}
             >
-              View Results
+              Get Back
             </button>
             <button
               className="py-2 px-4 bg-gray-300 text-gray-800 rounded-lg hover:bg-gray-400 ml-2"

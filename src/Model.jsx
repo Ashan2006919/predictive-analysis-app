@@ -29,6 +29,11 @@ const Model = () => {
     setFile(uploadedFile);
 
     if (uploadedFile) {
+
+      if (uploadedFile.type !== "text/csv") { // Show warning modal if file is not a CSV 
+      toggleWarningModal(); 
+      return; }
+
       const formData = new FormData();
       formData.append("file", uploadedFile);
 
@@ -234,7 +239,8 @@ const Model = () => {
                     onChange={(e) =>
                       handleColumnValueChange(column, e.target.value)
                     }
-                    className="h-12 border border-gray-300 text-gray-600 text-base rounded-lg block w-full py-2.5 px-4 focus:outline-none"
+                    className="h-12 border border-gray-300 text-gray-600 text-base rounded-lg 
+                    block w-full py-2.5 px-4 focus:outline-none"
                   />
                 </div>
               ))}
@@ -244,7 +250,8 @@ const Model = () => {
           <div className="flex justify-center mt-4">
             <motion.button
               type="button"
-              className="relative py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-purple-600 shadow-lg text-white hover:bg-purple-500 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+              className="relative py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent
+               bg-purple-600 shadow-lg text-white hover:bg-purple-500 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
               aria-haspopup="dialog"
               aria-expanded={isSuccessOpen || isWarningOpen}
               aria-controls="hs-basic-modal"
